@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  min-height: 100svh;
+  background-color:#fff;
+  color: black;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+  font-family: 'Sarabun', sans-serif;
+}
+/* Add this CSS to your App.css file */
+.App [data-title]:before {
+  content: attr(data-title);
+  display: block;
+  /* margin: 10px; You can adjust the margin as needed */
+  color: #333; /* You can adjust the color as needed */
+  font-weight: bold; /* You can apply any desired styles */
+}
+.App-header{
+  width: 100vw;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.navigation{
+  /* background-color:white; */
+  width: 90vw;
+  height: 50px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* display: flex; */
+
+}
+.sidebar{
+  /* max-width: 1500px; */
+  display: flex;
+  align-items: center;
+  /* background-color: #333; */
+  height: 50px;
+}
+.menu-left{
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+.logo{
+  margin-top: 6px;
+  font-size: 30px;
+  display: none;
+}
+/* .menu-mid{
+  flex-grow: 4;
+  display: flex;
+  justify-content: center;
+} */
+.menu{
+  height: 70px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  float: right;
+  justify-content: end;
+}
+.fixed-navigation {
+  max-width: 1500px;
+  position: fixed; /* Fixed positioning */
+  /* top: 0; Place it at the top of the viewport */
+  /* width: 100%; Make it full-width */
+  background-color: #fff; /* Add background color as needed */
+  z-index: 1000; /* Set a higher z-index to ensure it appears above other content */
+  /* Add any other styling you need for your navigation bar */
+
 }
 
-.App-link {
-  color: #61dafb;
+/* Add styles for other elements as needed */
+
+/* body {
+  display: flex;
+  flex: 5;
+} */
+.left-part{
+  flex-grow: 1;
+}
+.mid-part{
+  flex-grow: 9;
+  text-align: center;
+  font-family: 'Sarabun', sans-serif;
+  /* background-color: #fff;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+}
+.section{
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* margin: 50px; */
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.right-part{
+  flex-grow: 1;
+}
+/* .App-header{
+  flex: 1.3;
+} */
+.App-header{
+  height: 100px;
+}
+footer {
+  /* flex: 1; Header and footer each take 1 part */
+  height: 10vh;
+}
+
+/* .menu{
+  display: flex;
+  align-items: center;
+  float: right;
+} */
+#burgerDash{
+  background-color: black;
+  width: 7px;
+  height: 7px;
+  /* margin-top: 1px; */
+  border-radius: 50%;
+  margin: 1px;
+}
+.burgerBar{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 columns of equal width */
+  /* gap: 1px; Adjust the gap as needed */
+  margin-right: 5px;
+  margin-left: 5px;
+  /* grid-template-rows: repeat(1, 1fr); Create 2 rows of equal height */
+}
+
+/* CSS for the pop-up navigation menu */
+.popup-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color:#d5a18e; /* Adjust the background color as needed */
+  overflow: hidden;
+  transition: height 0.5s ease; /* Smooth transition for height change */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+/* CSS for the pop-up navigation menu */
+.popup-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* background-color: #d5a18e; */
+  background: linear-gradient(45deg, #5E8C6A 0%, #BFB35A );
+  overflow: hidden;
+  transition: height 0.5s ease; /* Smooth transition for height change */
+  z-index: 1000; /* Ensure it appears above other content */
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Stack child elements vertically */
+  /* align-items: center; Center child elements horizontally */
+  /* justify-content: center; Center child elements vertically */
+}
+
+/* CSS for the Link components in the pop-up menu */
+.popup-menu .menu-link {
+  text-align: right; /* Right-align the text */
+  margin: 5px 0; /* Add some spacing between links */
+  padding: 0 20px; /* Add padding to the right to make space for the bullet */
+  position: relative; /* Position for pseudo-element */
+}
+
+/* CSS for the bullet */
+.popup-menu .menu-link::before {
+  /* content: "•"; Bullet character */
+  position: absolute;
+  left: 0; /* Position it to the left of the link */
+}
+
+/* CSS for the active Link component */
+.popup-menu .menu-link.active {
+  font-weight: bold; /* Make the text bold for the active item */
+}
+.sidebar .menu-link.menu-link.active{
+  font-weight: bold;
+}
+.menu-link.active{
+  font-weight: bold;
+}
+
+/* CSS for the open state of the pop-up menu */
+.popup-menu.open {
+  height: 100%; /* Expands to fill the entire page */
+}
+.close-button{
+  box-shadow: rgba(227, 203, 203, 0.983) 0px 2px 8px 0px;
+  margin: 20px;
+  color: black;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Media query to hide left and right parts on small screens (e.g., phones) */
+@media screen and (max-width: 768px) {
+  .mid-part{
+    flex-grow: 20;
   }
-  to {
-    transform: rotate(360deg);
+  .left-part, .right-part{
+    width: 10px;
+  }
+  .navigation{
+    /* width: 95vw; */
+    width: 90vw;
+  }
+  .menu-left{
+    display: none;
+  }
+  .logo{
+    display: block;
+    align-items: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-Left: 5px;
+    /* width: 90px;
+    height:70px;
+    background-color: #5E8C6A;
+    border-top-left-radius: 20px; */
   }
 }
+h1{
+  color: #4D5D53;
+}
+/* h1{
+  color: #4D5D53;
+} */
+/* h1{
+  color:    #607C8D
+} */
+
+/* #001800; */

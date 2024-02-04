@@ -1,0 +1,80 @@
+.work {
+    height: 30vh;
+    width: inherit;
+    overflow: hidden;
+  }
+  
+  .parallax-container {
+    position: relative;
+    height: 100%; /* Use 100% height of the parent container */
+    width: 100%; /* Use 100% width of the parent container */
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center vertically */
+  }
+  
+  .parallax-element {
+    width: 100px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-color: #3498db; /* Example background color */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  #experience-p{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    overflow-y: scroll;
+  }
+  #experience-p p{
+    min-width: 200px;
+    height: 120px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;display: flex;
+    align-items: center;
+    background: #D5DAD6;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.2px);
+    -webkit-backdrop-filter: blur(13.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .techstack{
+    font-size: 0.8rem;
+  }
+  .techstack p{
+    margin: 0;
+  }
+  .card-image{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+ .card-info{
+    width: 90vw;
+    height: 200px;
+ }
+ .card-info p{
+    margin: 0;
+    font-size: 0.8rem;
+ }
+ .card-info button{
+    margin-top: 10px;
+    border-style: none;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ }
+  .footer p{
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .flex-container{
+        display: flex;
+        justify-content: center;
+    }
+  }
