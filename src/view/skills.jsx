@@ -69,7 +69,7 @@ const Skills = () => (
 
 
     <Element name="certificate">
-    <Parallax style={{backgroundColor: 'white'}} strength={-80}>
+    {/* <Parallax style={{backgroundColor: 'white'}} strength={-80}> */}
         <div style={{ height: 600, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div class="rectangle-container">
                 <div class="rectangle">
@@ -80,16 +80,17 @@ const Skills = () => (
                     <div class="letter">S</div>
                     </div>
                     <div> 
-                        <h1> Certified Cloud Practitioner </h1>
+                        <h1 style={{color: 'white', fontSize: '2rem'}}> Certified Cloud Practitioner </h1>
                         <p> 2022 </p>
                     </div>
+                    
                 </div>
+                <img src= "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png" alt="cloudpractioneriCon" width= "100px" height= "100px" />
                 </div>
 
             </div>
-        </Parallax>
+        {/* </Parallax> */}
     </Element> 
-
   </div>
   </div>
 );

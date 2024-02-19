@@ -4,24 +4,17 @@ import { Link } from 'react-scroll';
 
 function Navigation({activePage, onNavigation, scrollPosition}) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-        // Set a threshold for when the fading effect should start
-    // Set a threshold for when the fading effect should start
-  const fadeThreshold = 100; // Adjust this value as needed
+  const fadeThreshold = 100; 
   // Set a threshold for when the background color change should start
   const bgColorChangeThreshold = 100;
-
   // Set initial fade opacity to 0
   const initialFadeOpacity = 0;
-
   // Calculate the fading opacity based on the scroll position
   const fadeOpacity = Math.max(initialFadeOpacity, Math.min(scrollPosition / fadeThreshold, 1));
-
   // Set initial color to black and background color to white
   const initialColor = 'black';
   const initialBackgroundColor = 'white';
-  const initialBurgerDashColor = 'black'; // Change this to your initial burger-dash color
-
-
+  const initialBurgerDashColor = 'black'; 
   // Dynamically set the color with fading effect
   const sidebarColor = fadeOpacity === initialFadeOpacity ? initialColor : 'white';
 

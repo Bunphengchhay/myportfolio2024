@@ -7,18 +7,21 @@ function SocialContact() {
     return ( 
         <div className='homeicon'>
                         <a href="https://www.linkedin.com/in/bunphengchhay/" target="_blank" rel="noopener noreferrer">
+                            LinkedIn
                             <img
                                 src={linkedinicon}
                                 alt="LinkedIn"
                             />
                         </a>
                         <a href="https://github.com/Bunphengchhay" target="_blank" rel="noopener noreferrer">
+                            Github
                             <img
                                 src={githubicon}
                                 alt="GitHub"
                             />
                         </a>
                         <a href={myresume} download="bunphengchhayResume.pdf" target="_blank" rel="noopener noreferrer">
+                            Resume
                             <img
                                 src={resumeicon}
                                 alt="Resume"

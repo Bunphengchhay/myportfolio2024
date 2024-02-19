@@ -29,30 +29,37 @@
     display: flex;
     overflow-y: scroll;
   }
+  /* #D5DAD6; */
   #experience-p p{
     min-width: 200px;
     height: 120px;
     margin: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;display: flex;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    display: flex;
     align-items: center;
-    background: #D5DAD6;
+    /* background: #74b49b; */
+    /* background-color: #40826D; */
+    background-color: white;
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(13.2px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    /* backdrop-filter: blur(13.2px);
     -webkit-backdrop-filter: blur(13.2px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
     font-size: 0.8rem;
     font-weight: bold;
+    /* color: white */
   }
   .techstack{
     font-size: 0.8rem;
   }
   .techstack p{
     margin: 0;
+    font-size: 0.7rem;
   }
-  .card-image{
+  /* .card-image{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
+  } */
  .card-info{
     width: 90vw;
     height: 200px;
@@ -72,9 +79,25 @@
     margin: 0;
   }
 
-  @media screen and (max-width: 768px) {
+  .flex-container{
+    display: flex;
+    justify-content: center;
+}
+
+  /* @media screen and (max-width: 768px) {
     .flex-container{
         display: flex;
         justify-content: center;
     }
-  }
+  } */
+
+#expbox{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/* #expbox p{
+  text-align: left;
+} */
+.footer p{
+  font-size: 0.5rem;
+}

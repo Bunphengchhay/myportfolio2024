@@ -15,9 +15,9 @@ import pca from '../artifact/pca.png'
 
 function SchoolProject() {
     return ( 
-        <div style={{width: 'inherit', minHeight: '100svh', backgroundColor: '#D5DAD6', borderRadius: '30px', overflowY: 'scroll'}} className='sp'>
+        <div style={{width: 'inherit', minHeight: '100svh', backgroundColor: 'darkslategray', borderRadius: '30px', overflowY: 'scroll'}} className='sp'>
             <div className="sp-top">
-                <h2 style={{textAlign: 'center', marginTop: 20, color: 'black'}}> DevSecOps</h2>
+                <h2 style={{textAlign: 'center', marginTop: 20, color: 'white'}}> DevSecOps</h2>
                 <ReactTimeLine data = {sde} />
             </div>
         </div>
