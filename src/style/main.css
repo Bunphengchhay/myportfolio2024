@@ -24,7 +24,7 @@
   }
 
   .homeicon a{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     margin: 2px;
     text-decoration: none;
     color: black;
@@ -121,6 +121,7 @@
     min-height: 50vh;
     background-color: white;
     position: relative;
+    margin-top: 50px !important;
   }
   .element {
     width: 90vw;

@@ -50,12 +50,12 @@
     font-weight: bold;
     /* color: white */
   }
-  .techstack{
-    font-size: 0.8rem;
-  }
+  /* .techstack{
+    font-size: 1rem;
+  } */
   .techstack p{
     margin: 0;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   /* .card-image{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -66,7 +66,7 @@
  }
  .card-info p{
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
  }
  .card-info button{
     margin-top: 10px;
@@ -93,11 +93,4 @@
 
 #expbox{
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-
-/* #expbox p{
-  text-align: left;
-} */
-.footer p{
-  font-size: 0.5rem;
 }

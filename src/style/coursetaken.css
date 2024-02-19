@@ -9,6 +9,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
    border-radius: 30px;
    padding-bottom: 20px;
+   overflow-x: scroll;
 
 }
 .topCardNav{
@@ -24,7 +25,7 @@
 .topCardNav p{
     margin: 5px;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 }
 .active{
     font-weight: bolder;
@@ -35,7 +36,7 @@
 }
 
 #courseDescription li{
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 #line{
@@ -45,3 +46,11 @@
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 768px) {
+    .topCardNav p{
+        font-size: 0.8rem;
+    }
+    #courseDescription li{
+        font-size: 0.7rem;
+    }
+}

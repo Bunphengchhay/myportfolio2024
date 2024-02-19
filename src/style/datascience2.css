@@ -1,6 +1,6 @@
 .datascience{
     width: min(90vw, 1500px);
-    height: 100%;
+    height: auto;
     display: flex;
     /* justify-content: center; */
     overflow: hidden;
@@ -20,7 +20,7 @@
     /* scroll-behavior: smooth; */
 }
 .card p{
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 .card-info{
     width: 100%;
@@ -40,8 +40,8 @@
 
 .card {
    margin-right: 10px;
-    min-width: 370px;
-    height: 400px;
+    min-width: 400px;
+    height: 450px;
     perspective: 1000px;
     transform-style: preserve-3d;
     transition: transform 0.5s;

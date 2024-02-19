@@ -51,11 +51,11 @@ align-items: center;
     gap: 10px; /* Adjust the gap between grid items */
 }
 .homeskill p {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 .homeskill h3{
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
     color: #40826D;
 }
 

@@ -14,7 +14,7 @@ import React, { useState, useRef, useEffect } from 'react';
 function Datascience2() {
   
     return(
-        <div style={{ minHeight: '50svh', maxWidth: '1500px', display: 'flex', justifyContent: 'center', overflowX: 'scroll', marginTop: 50}}>
+        <div style={{ minHeight: '40vh', maxWidth: '1500px', display: 'flex', justifyContent: 'center', overflowX: 'scroll', marginTop: 50}}>
             <div style={{ width: '100%', height: '500px', display: 'flex', overflowY: 'hidden'}}>
              {data.map((item, index) => (
                         <Card

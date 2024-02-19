@@ -44,7 +44,7 @@ function App() {
                     <div>
                       <img src={me02} style={{width: '22rem', height: '15rem'}} alt="my photo"/>
                     </div>
-                    <h1 style={{fontSize: '1.2rem', marginBottom: '0px'}}> Hi there!</h1>
+                    <h1 style={{fontSize: '1.5rem', marginBottom: '0px'}}> Hi there!</h1>
                     <div className="myintro"> 
                       <p style={{fontSize: '0.8rem'}}> I am Bunpheng CHHAY (PENCE), a Computer Science Student. I am passionate about <strong> DevSecOps, System Design and Cloud Infrastructure, Data Science,</strong> and utilizing <strong> Deep Learning </strong> models for business insights. </p>
                     </div>
@@ -69,11 +69,11 @@ function App() {
               </div>
         
         </div>
-        <div className="main-content2" style={{maxWidth: '1500px', margin: '0 auto',minHeight: '100vh', display: 'flex', alignItems: 'center'}}>
+        <div className="main-content2" style={{maxWidth: '1500px', margin: '0 auto',minHeight: '50vh', display: 'flex', alignItems: 'center'}}>
           <Element name = 'skills'>
             <h1 style={{marginBottom: 0, fontSize: '2rem'}}> Technical Skills </h1>
             <div style={{width: '100%', height: 1, backgroundColor: 'grey', marginTop: 0, marginBottom: '20px'}}> </div>
-            <p style={{fontSize: '0.8rem'}}>
+            <p style={{fontSize: '1rem'}}>
               These skills have been honed through academic pursuits, internships, and personal projects. I maintain a continuous enthusiasm for learning new programming languages and tools. Currently, my focus lies in SecDevOps and Data Science, and I am passionate about harnessing the power of AI/ML for valuable business insights.
             </p>
 
@@ -81,11 +81,11 @@ function App() {
           </Element>
         </div>
 
-        <div className="main-content2" style={{margineTop: '10px', maxWidth: '1500px', margin: '0 auto'}}>
+        <div className="main-content2" style={{ maxWidth: '1500px', margin: '0 auto'}}>
           <Element name = 'workexperience'>
             <h1 style={{marginBottom: 0., fontSize: '2rem'}}> Industrial Experiences  </h1>
             <div style={{width: '100%', height: 1, backgroundColor: 'grey', marginTop: 0, marginBottom: '20px'}}> </div>
-            <p style={{fontSize: '0.8rem'}}>
+            <p style={{fontSize: '1rem'}}>
               With three years of non technical experience at a startup, I contributed to diverse projects in hospitality, real estate, legal, marketing, HR, and IT. Motivated by a passion for technology, I pursued a B.S. in Computer Science, leading to an internship at Amazon Web Services as an Associate Solutions Architect. Managing two AI/ML projects further inspired me to pursue an M.S. in Software Engineering, specializing in Data Science.
             </p>
             <div>

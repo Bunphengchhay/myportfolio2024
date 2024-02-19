@@ -3,7 +3,7 @@ import SocialContact from "./social";
 function Footer() {
     return ( 
         <div style={{width: '90vw', height: 'auto'}} className="footer">
-            <p style={{ fontSize: '0.5rem', textAlign: 'center', color: '#888' }}>
+            <p style={{ fontSize: '0.8rem', textAlign: 'center', color: '#888' }}>
             Disclaimer: This portfolio website is for demonstration purposes. All rights to the respective owners of third-party content are acknowledged. If you have any concerns or inquiries, please contact me.
             </p>
             <br/>
