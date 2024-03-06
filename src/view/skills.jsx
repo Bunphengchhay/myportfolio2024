@@ -3,7 +3,7 @@ import { Parallax, Background } from "react-parallax";
 import { Link, Element } from "react-scroll";
 import "../style/skills.css";
 const styles = {
-  fontFamily: "Dosis",
+  // fontFamily: "Dosis",
   textAlign: "center",
 //   margin: "10px",
 };

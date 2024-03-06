@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-family: 'Sarabun', sans-serif;
+  /* font-family: 'Sarabun', sans-serif; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 /* Add this CSS to your App.css file */
 .App [data-title]:before {
@@ -85,7 +86,7 @@
 .mid-part{
   flex-grow: 9;
   text-align: center;
-  font-family: 'Sarabun', sans-serif;
+  /* font-family: 'Sarabun', sans-serif; */
   /* background-color: #fff;
   border-radius: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
@@ -222,7 +223,7 @@ footer {
   .logo{
     display: block;
     align-items: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     margin-Left: 5px;
     /* width: 90px;
     height:70px;

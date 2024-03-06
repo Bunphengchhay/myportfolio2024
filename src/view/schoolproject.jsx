@@ -1,15 +1,15 @@
 // import CardText from '../components/cardtext'
 import ReactTimeLine from '../components/reacttimeline';
 import '../style/experience.css'
-import RAFDB from '../artifact/RAFDB.png'
-import FaceMask from '../artifact/dataset-cover.jpg'
-import cocodataset from '../artifact/cocodataset.png'
-import vit from '../artifact/vit.webp'
-import textsentimental from '../artifact/textsentimental.png'
-import decissiontree from '../artifact/decisiontree.png'
-import linearRegression from '../artifact/linearRegression.png'
-import sklearn from '../artifact/sklearn.jpeg'
-import pca from '../artifact/pca.png'
+// import RAFDB from '../artifact/RAFDB.png'
+// import FaceMask from '../artifact/dataset-cover.jpg'
+// import cocodataset from '../artifact/cocodataset.png'
+// import vit from '../artifact/vit.webp'
+// import textsentimental from '../artifact/textsentimental.png'
+// import decissiontree from '../artifact/decisiontree.png'
+// import linearRegression from '../artifact/linearRegression.png'
+// import sklearn from '../artifact/sklearn.jpeg'
+// import pca from '../artifact/pca.png'
 
 
 
@@ -27,6 +27,20 @@ function SchoolProject() {
 export default SchoolProject;
 
 const sde = [
+    {
+        title: 'Web Applicaiton Hosting',
+        course: 'Enterprise Software Enginering',
+        institute: 'San Jose State University',
+        date: 'Feb 2024 - Feb 2024',
+        description: 'Provide a hosting solutions to web applications',
+        functionality: 'Implemented web applicaitons React front end, PHP backend, and MYSQL server database',
+        task: 'deployed a web server environment on AWS EC2 instance and load balancer, including installation of Apache HTTP server, mySQL, and PHP. Configured domain name using Route 53, managed DNS setting and SSH connectivity, ensured integration of a custom domain with EC2. ',
+        role: 'Developer',
+        techStack: 'Javascript, PHP, MySQL, React, HTML, CSS, HTTPs API, EC2, Loadbalancer, Amazon IAM, and Amazon Route 53',
+        github: "https://github.com/Bunphengchhay/myFirstphpApp/tree/main",
+        website: "http://www.pencechhay.com"
+
+    },
     {
         title: 'Movie Theater Club Application',
         course: 'Software System Engineering',

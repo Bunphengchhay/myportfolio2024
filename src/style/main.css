@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center; /* Align children horizontally in the center */
     align-items: center; /* Align children vertically in the center */
-    font-family: 'Dosis' sans-serif;
+    /* font-family: 'Dosis' sans-serif; */
   }
 
   .main-content1{

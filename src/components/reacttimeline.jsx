@@ -15,15 +15,17 @@ function ReactTimeLine({ data }) {
             date={item['date']}
             iconStyle={{ background: 'white', color: 'white' }}
           >
-            <h3 className="vertical-timeline-element-title" style={{fontSize: '1rem'}}>{item['title']}</h3>
+            <h3 className="vertical-timeline-element-title" style={{fontSize: '1.2rem'}}>{item['title']}</h3>
             <div style={{height: 'auto', textAlign: 'left' }} className= 'vertTime'>
-              <p style={{ margin: '0', color: 'orange', fontSize: '1rem' }}><strong>{item['institute']}</strong></p>
-              <p style={{ margin: '0', fontSize: '1rem', color: 'white'  }}><strong >Course:</strong> {item['course']}</p>
+              <p style={{ margin: '0', color: 'white', fontSize: '1rem' }}><strong>{item['institute']}</strong></p>
+              <p style={{ margin: '0', fontSize: '1rem', color: 'orange'  }}><strong >Course:</strong> {item['course']}</p>
               <p style={{ margin: '0', fontSize: '1rem'  }}><strong>Description:</strong> {item['description']}</p>
               <p style={{ margin: '0', fontSize: '1rem'  }}><strong>Functionality:</strong> {item['functionality']}</p>
               <p style={{ margin: '0', fontSize: '1rem'  }}><strong>Role:</strong> {item['role']}</p>
             </div>
             <p style={{ textAlign: 'left', margin: '0', fontSize: '1rem'   }}><strong style={{color: 'orange'}}>Tech Stack:</strong> {item['techStack']}</p>
+            {item['website'] && <p style={{ margin: '0', fontSize: '1rem' }}> <strong>Website: </strong> <a href={item['website']} style={{color: 'white'}}> {item['website']}</a></p>}
+            {item['github'] && <p style={{ margin: '0', fontSize: '1rem' }}> <a href={item['github']} style={{textDecoration: 'underline', color: 'white', fontWeight: 'bold'}}> Github </a></p>}
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
