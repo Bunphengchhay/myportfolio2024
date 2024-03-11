@@ -50,7 +50,8 @@ const sde = [
         functionality: 'Implemented features such as member signup, employee dashboard with role-based CRUD operations, and booking functionality.',
         task: 'Led the team as a team lead and Scrum Master. Contributed to system design, schema creation, and UML. Managed AWS deployment, developed HTTPS APIs, and worked on the frontend, including landing page, booking, and employee dashboard.',
         role: 'Team lead, Scrum Master, Developer',
-        techStack: 'Javascript, MERN stack, MongoDB, Express.js, React.js, Node.js, AWS EC2, AWS Elastic Load balancing, HTML, CSS, Figma, Github, Jira, Agile'
+        techStack: 'Javascript, MERN stack, MongoDB, Express.js, React.js, Node.js, AWS EC2, AWS Elastic Load balancing, HTML, CSS, Figma, Github, Jira, Agile',
+        github: 'https://github.com/Bunphengchhay/team-project-api_assassins-main'
     },
     {
         title: 'Barbershop Website',
@@ -61,7 +62,8 @@ const sde = [
         functionality: 'Implemented features for viewing information and making appointments.',
         task: 'Led the frontend team as a team lead. Developed the entire frontend structure, including navigation and login/logout functionality.',
         role: 'Frontend Team lead, Developer',
-        techStack: 'Javascript, MERN stack, MongoDB, Express.js, React.js, Node.js, AWS EC2, HTML, CSS, Figma, UML and User Diagram, Jira, Github, Agile'
+        techStack: 'Javascript, MERN stack, MongoDB, Express.js, React.js, Node.js, AWS EC2, HTML, CSS, Figma, UML and User Diagram, Jira, Github, Agile',
+        github: 'https://github.com/Vib1240n/A-Cup-Of-Java/tree/vercel-production'
     },
     {
         title: 'Database Management Design',

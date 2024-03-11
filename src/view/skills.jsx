@@ -71,13 +71,13 @@ const Skills = () => (
     <Element name="certificate">
     {/* <Parallax style={{backgroundColor: 'white'}} strength={-80}> */}
         <div style={{ height: 600, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div class="rectangle-container">
-                <div class="rectangle">
-                    <div class="line"></div>
+            <div className="rectangle-container">
+                <div className="rectangle">
+                    <div className="line"></div>
                     <div className="letter-container">
-                    <div class="letter">A</div>
-                    <div class="letter">W</div>
-                    <div class="letter">S</div>
+                    <div className="letter">A</div>
+                    <div className="letter">W</div>
+                    <div className="letter">S</div>
                     </div>
                     <div> 
                         <h1 style={{color: 'white', fontSize: '2rem'}}> Certified Cloud Practitioner </h1>
