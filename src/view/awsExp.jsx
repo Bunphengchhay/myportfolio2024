@@ -1,9 +1,8 @@
 import "../style/work.css"
 import allIntern from "../artifact/myaws.JPG";
 import { Parallax } from "react-parallax";
-import { Link, Element } from "react-scroll";
+import { Element } from "react-scroll";
 import tlbu from "../artifact/tlbu.png"
-import awsLogo from "../artifact/aws.svg"
 // const Ai = "https://images.pexels.com/photos/8386358/pexels-photo-8386358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 const img1 = "https://www.forwardnetworks.com/wp-content/uploads/2023/10/AWS_logo_RGB.jpg"
 
@@ -138,15 +137,27 @@ const awsExperiences = [
 
 const tlbuExperiences =[
     {
-        title: 'Cross-Functional Work',
-        task: 'Developed and executed scalable business plans for high school and hotel including market strategy, customer relations, legal, IT and HR '
+        title: 'Achievements',
+        task: 'Led multi-million dollar projects, driving a 30% revenue increase through strategic decision-making and collaboration with executives. Adopted new IT system upgrades to streamline operations, improving internal processes and enhancing customer relations'
+    },
+    {
+        title: 'Planning and Executions',
+        task: 'Built business plans, market research, finance, legal, IT infrastructure, property acquisition to optimize operations and scalability. Identified target markets and implemented data-driven marketing strategies, increasing new customers by 70%'
     },
     {
         title: 'Support',
         task: 'Liaised between President, VP, and Executive manager and provided recommendations over multiple projects including high school project, property, and hotel management'
-    },
-    {
-        title: 'Project Management',
-        task: 'Co-leaded in property acquisition, established internal organization structure for high school project, managed cash flow and budgeting, ensured project milestone and its executions'
     }
+    // {
+    //     title: 'Cross-Functional Work',
+    //     task: 'Developed and executed scalable business plans for high school and hotel including market strategy, customer relations, legal, IT and HR '
+    // },
+    // {
+    //     title: 'Support',
+    //     task: 'Liaised between President, VP, and Executive manager and provided recommendations over multiple projects including high school project, property, and hotel management'
+    // },
+    // {
+    //     title: 'Project Management',
+    //     task: 'Co-leaded in property acquisition, established internal organization structure for high school project, managed cash flow and budgeting, ensured project milestone and its executions'
+    // }
 ]

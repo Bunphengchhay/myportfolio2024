@@ -18,6 +18,8 @@ function Skill01() {
                         <h3> Database Management </h3>
                         <p> SQL </p>
                         <p> MongoDB </p>
+                        <p> Pinecone </p>
+                        <p> ChromaDB </p>
                     </div>
                     <div className='homeskill'>
                         <h3> Developer Stack </h3>
@@ -40,6 +42,8 @@ function Skill01() {
                         <h3> Data Science </h3>
                         <p> Pytorch </p>
                         <p> Tensorflow </p>
+                        <p> Langchain </p>
+                        <p> Haystack </p>
                         <p> Deep learning algorithm </p>
                         <p> Transformer </p>
                         <p> Huggingface </p>
@@ -55,12 +59,21 @@ function Skill01() {
                     <div className='homeskill'>
                         <h3> Cloud </h3>
                         <p> AWS Cloud Services </p>
-                        <p> CI/CD </p>
+                        <p> Google GCP </p>
+                        <p> Cloudflare Workers</p>
                         <p> AWS Lambda</p>
                         <p> AWS Amplify </p>
                         <p> EC2 </p>
+                        <p> S3 </p>
+                        <p> ECR </p>
+                        <p> ECS </p>
+                        <p> ALB </p>
+                        <p> Fargate </p>
                         <p> AWS IAM </p>
                         <p> Sage Maker </p>
+                        <p> Amazon Connect </p>
+                        <p> Amazon Lex </p>
+                        <p> CI/CD </p>
                         <p> AWS managed AI Services</p>
                         <p> Infrastructure as Code </p>
                         <p> AWS Architecture design </p>

@@ -1,7 +1,6 @@
 import githubicon from '../artifact/githubicon.png'
 import resumeicon from '../artifact/resumeicon.png'
 import linkedinicon from '../artifact/linkedinicon.webp'
-import myresume from '../artifact/resume202401sde.pdf'
 import "../style/main.css"
 function SocialContact() {
     return ( 
@@ -20,13 +19,19 @@ function SocialContact() {
                                 alt="GitHub"
                             />
                         </a>
-                        <a href={myresume} download="bunphengchhayResume.pdf" target="_blank" rel="noopener noreferrer">
+                        <a
+                            href="/artifact/resumesjsubunphengchhay.pdf"
+                            download="bunphengchhayResume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Resume
                             <img
                                 src={resumeicon}
                                 alt="Resume"
                             />
                         </a>
+
             </div>
      );
 }

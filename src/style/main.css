@@ -1,3 +1,6 @@
+.AppBackground{
+  background-size: cover;
+}
 .main {
     width: 100vw;
     min-height: 100vh;
@@ -5,10 +8,12 @@
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Align children horizontally in the center */
-    align-items: center; /* Align children vertically in the center */
-    /* font-family: 'Dosis' sans-serif; */
+    justify-content: center;
+    align-items: center;
+
   }
+
+  /* Add the following styles to your main.css file */
 
   .main-content1{
     position: relative;

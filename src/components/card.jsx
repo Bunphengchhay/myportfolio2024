@@ -10,7 +10,7 @@ function Card({ data }) {
     };
 
     return (
-        <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
+        <div style={{borderRadius: '20px'}} className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
             <div className='card-front'>
                 <h3 style={{ fontSize: '1.5rem', color: 'black', marginBottom: 0 , marginLeft: 10, marginTop: 10}}> {data['title']} </h3>
                 <p style={{ margin: 0 , marginLeft: 10, color: '#4D5D53', fontWeight: 'boler'}}> {data['course']}</p>

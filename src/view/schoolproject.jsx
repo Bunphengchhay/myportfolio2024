@@ -28,17 +28,16 @@ export default SchoolProject;
 
 const sde = [
     {
-        title: 'Web Applicaiton Hosting',
+        title: 'Web Application',
         course: 'Enterprise Software Enginering',
         institute: 'San Jose State University',
         date: 'Feb 2024 - Feb 2024',
         description: 'Provide a hosting solutions to web applications',
-        functionality: 'Implemented web applicaitons React front end, PHP backend, and MYSQL server database',
-        task: 'deployed a web server environment on AWS EC2 instance and load balancer, including installation of Apache HTTP server, mySQL, and PHP. Configured domain name using Route 53, managed DNS setting and SSH connectivity, ensured integration of a custom domain with EC2. ',
+        functionality: 'Implemented web applicaitons React front end, PHP backend, and MYSQL server database, and login and logout.',
+        task: 'Deployed a web front end and backend on a single AWS EC2 instance with load balancer, including installation of Apache HTTP server, AWS RDS-MySQL, and PHP. Configured domain name using Route 53, managed DNS setting and SSH connectivity, ensured integration of a custom domain with EC2. ',
         role: 'Developer',
         techStack: 'Javascript, PHP, MySQL, React, HTML, CSS, HTTPs API, EC2, Loadbalancer, Amazon IAM, and Amazon Route 53',
-        github: "https://github.com/Bunphengchhay/myFirstphpApp/tree/main",
-        website: "http://www.pencechhay.com"
+        github: "https://github.com/Bunphengchhay/cmpe272marketplace",
 
     },
     {
