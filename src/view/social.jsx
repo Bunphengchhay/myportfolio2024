@@ -20,7 +20,8 @@ function SocialContact() {
                             />
                         </a>
                         <a
-                            href="/artifact/resumesjsubunphengchhay.pdf"
+                            // href="/artifact/resumesjsubunphengchhay.pdf"
+                            href='/artifact/SE02_2025v1.pdf'
                             download="bunphengchhayResume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"

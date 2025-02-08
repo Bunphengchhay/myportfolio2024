@@ -18,25 +18,26 @@ const insideStyles = {
 const image1 =
   "https://www.sjsu.edu/_images/buildings/ADV_about-sjsu_2.jpg";
 
+const image2 = "https://questbridge.imgix.net/content/uploads/partners/boston-university/QuestBridge_Header.png?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=800&q=90&w=800&s=58d375986fd03ca2cb0c4bfb9fef4bf8";
 const Educations = () => (
   <div style={{ maxWidth: '1500px', margin: '0 auto' }}>
   <div style={styles} >
     {/* <h1 style={{ textAlign: "left", color: 'white', borderBottom: '1px solid white' }}> Educations </h1> */}
     <Element name="education">
-        <Parallax bgImage={image1} strength={500}>
+        <Parallax bgImage={image2} strength={500}>
         <h1 style={{ textAlign: "left", color: 'white', textAlign: 'center', fontSize: '3rem',transform: 'translateY(150px)'}}> Educations </h1>
             <div style={{ height: 600, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
 
                     <div className="cardblur">
                         <div style={{width: '100%', margin: '10px'}}>
                             <div style={{width: '100%', display: 'flex', margin: 0, alignItems:'center'}}>
-                                    <h3 style={{flex: 3, fontSize: '1rem', margin: 0, textAlign: 'left', fontWeight: 'bold'}}> M.S Computer Software Engineering</h3>
-                                    <p style={{flex: 1, fontWeight: 'bold', margin: 0, textAlign: 'right'}}> Exp. 2025 </p>
+                                    <h3 style={{flex: 3, fontSize: '1rem', margin: 0, textAlign: 'left', fontWeight: 'bold'}}> M.S Data Science </h3>
+                                    <p style={{flex: 1, fontWeight: 'bold', margin: 0, textAlign: 'right'}}> Exp. 2026 </p>
                             </div>
                             <div style={{width: '100%', height: '1px', backgroundColor: 'grey'}}> </div>
                             <div style={{textAlign: 'left'}}> 
-                                <p style={{margin: 0}}> Specialized in Data Science </p>
-                                <p style={{margin: 0}}> San Jose State University</p>
+                                {/* <p style={{margin: 0}}> Specialized in Data Science </p> */}
+                                <p style={{margin: 0}}> Boston University - Boston </p>
                               
                             </div>
                             <br/>
@@ -51,12 +52,12 @@ const Educations = () => (
                             </div>
                             <br/>
                             <div style={{width: '100%', display: 'flex', margin: 0}}>
-                                    <h3 style={{flex: 2, fontSize: '1rem', margin: 0, textAlign: 'left', fontWeight: 'bold'}}> L.L.M Business, Finance, and Corporation </h3>
+                                    <h3 style={{flex: 2, fontSize: '1rem', margin: 0, textAlign: 'left', fontWeight: 'bold'}}> A.S Business Administration </h3>
                                     {/* <p style={{flex: 1, fontWeight: 'bold', margin: 0, textAlign: 'right'}}> 2017 </p> */}
                             </div>
                             <div style={{width: '100%', height: '1px', backgroundColor: 'grey'}}> </div>
                             <div style={{textAlign: 'left'}}> 
-                                <p style={{margin: 0}}> The George Washington University  </p>
+                                <p style={{margin: 0}}> Atlantic Cape Community College - NJ  </p>
                             </div>
                             <div> 
 
