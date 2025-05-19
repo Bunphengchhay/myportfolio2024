@@ -9,11 +9,13 @@ import linkedLogo from '../artifact/icons8-linkedin-80.png';
 import githubLogo from '../artifact/icons8-github-100.png';
 import resumeLogo from '../artifact/icons8-resume-100.png';
 import myresume from '../artifact/intern_sde_05202.pdf';
+import { useState } from 'react';
 // import awsLogo from '../artifact/aws.png'
 
 function Overview({toggleEnableChatbot, isChatbotEnable}) {
     // const awsLogo = 'https://images.icon-icons.com/2407/PNG/512/aws_icon_146074.png'
     // const intelBlackLogo = 'https://i.pinimg.com/736x/17/35/2f/17352fcf0626d3e553839e902fc14f5a.jpg'
+    const [isReadMore, setIsReadMore] = useState(false)
     const name = "Hey, I'm Bunpheng".split("").map(char => char === " " ? "\u00A0" : char);
     const controls = useAnimation();
     const nameRef = useRef(null);
@@ -21,7 +23,7 @@ function Overview({toggleEnableChatbot, isChatbotEnable}) {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start 15%", "end 5%"]
+        offset: ["start 0%", "end 5%"]
 
     });
 
@@ -51,6 +53,28 @@ function Overview({toggleEnableChatbot, isChatbotEnable}) {
     }, [isInView, controls]);
     
 
+    const containerVariants = {
+      hidden: {},
+      visible: {
+        transition: {
+          staggerChildren: 0.3,
+        },
+      },
+    };
+    
+    const itemVariants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    };
+    
+    const bounceTransition = {
+      y: {
+        duration: 1.5,
+        yoyo: Infinity,  // repeat forever
+        ease: "easeOut",
+      },
+    };
+
   return (
     <div className='w-full'>
       <section className="w-full h-auto flex flex-col items-center justify-center md:flex-row mb-7 md:mb-25 ">
@@ -78,11 +102,7 @@ function Overview({toggleEnableChatbot, isChatbotEnable}) {
           <p className='text-sm'>
             Leveraging AIML and Cloud Infrastructure to build impactful applications and improve user's experiences
           </p>
-          <p className='text-sm text-gray-500 mt-2'> Currently at @Intel, Ex - @AWS SA, Ex -  @Kismet XYZ SE </p>
-          {/* <div className='w-full flex justify-center mt-2 gap-6'>
-                <img src={awsLogo} alt='aws logo' width={30} height={30} className='rounded-[50%]'/>
-                <img src={intelBlackLogo} alt='intel logo' width={30} height={30} className='rounded-[50%]'/>      
-          </div> */}
+          <p className='text-sm text-gray-500 mt-2'>Currently @Intel · Previously @AWS SA · @Kismet XYZ SE</p>
         </div>  
       </section>
 
@@ -109,38 +129,28 @@ function Overview({toggleEnableChatbot, isChatbotEnable}) {
           >
             <h1 className='text-4xl font-bold mb-0 text-white'> About Me</h1>
             <p className=' text-sm mb-2 mt-0 text-yellow-500'> I am a Software Engineer</p>
-            <p >
-                I have been working in the non profit organization for a few years. I have gained valuable experience in customer service, team management, and problem-solving. I am now transitioning into the tech field, where I can leverage my skills to make a positive impact.
-                I have obtained my Bachelor of Science in Computer Scinece from Sacramento State University in May 2023. I am currently pursuing a Master of Science in Data Science at Boston University. I am passionate about using technology to solve real-world problems and improve people's lives.
-                     <br/><br/>
-                I have worked at <strong> Amazon Web Services (AWS) </strong> as an Associate Solutions Architect Intern. I have gained valuable experience in cloud computing, DevOps, and system design. 
-                I have also worked as Fullstack AIML Engineer at <strong> Kismet XYZ </strong> where I deepen my knowledge in AIML applicaitons and realtime data processing including Agentic AI, RAG, ETL pipeline and data visualization.
-                I am now looking for opportunities to apply my skills in a challenging and dynamic environment.
-            </p>
-            {/* <div className='flex justify-center mt-10 gap-6'>
-                {
-                    myContact.map((item, index) => (
-                        <img key={index} src={item.icon} alt={item.title} className="w-[50px] h-[40px] object-contain"/>
-                    ))
-                }
-            </div> */}
 
-            <div className='mt-3'>
-                <h1 className='font-bold'> Want to learn more about me ?</h1>
-                <p className="italic">An AI-powered bot that answers questions about my background, skills, and projects.</p>
-                <p className="italic">
-                Powered by RAG and LangGraph, running on Hugging Face endpoints, with a React app hosted on AWS.
+            <div>
+              <p>
+                With a background in nonprofit, management, and finance, I bring a unique lens to problem-solving and innovation. Transitioning into tech has enabled me to build intelligent systems that make a real difference for people, businesses, and communities. I’m driven to create technology that not only solves problems but delivers meaningful, lasting impact.
+              </p>
+
+              <button className="underline" onClick={() => setIsReadMore(!isReadMore)}>
+                {isReadMore ? 'Show Less' : 'Read More'}
+              </button>
+              
+              {isReadMore && (
+              <div className="mt-4">
+                <p>
+                  My career began in the nonprofit sector, where I developed strong skills in customer service, team leadership, and problem-solving—always with empathy and impact at the core. To expand my reach, I earned a B.S. in Computer Science from Sacramento State and am currently pursuing an M.S. in Data Science at Boston University, focusing on machine learning and real-world data applications.
+                  <br /><br />
+                  I’ve worked at <strong>AWS</strong> as an Associate Solutions Architect, focusing on cloud infrastructure and DevOps, and at <strong>Kismet XYZ</strong> as a Fullstack AIML Engineer, building real-time intelligent systems using RAG, Agentic AI, and analytics pipelines. In summer 2025, I’ll join <strong>Intel</strong> as a Graduate Technical Software Intern, contributing to data-driven tools for chip manufacturing optimization.
+                  <br /><br />
+                  I'm passionate about creating scalable, human-centered solutions that solve meaningful problems across domains.
                 </p>
+              </div>
+            )}
 
-
-                <div className='flex justify-start mt-3 gap-2'>
-                    <h3 className="text-xl font-bold">Meet Pence Bot </h3>
-                    <img src='https://cdn-icons-png.flaticon.com/512/11719/11719585.png' alt='pence bot' width={30} height={30} className='rounded-[50%]'/>
-                </div>
-                <button onClick={() => {toggleEnableChatbot()}}
-                    className="bg-blue-600 text-white px-2 py-1 mt-2 rounded hover:bg-blue-700">
-                        Try It Now
-                    </button>
             </div>
 
             <div className='mt-5'>
@@ -170,6 +180,61 @@ function Overview({toggleEnableChatbot, isChatbotEnable}) {
           </motion.div>
         </div>
       </div>
+      <motion.div
+        className="my-24 text-center text-xs"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h1
+          className="font-bold text-3xl"
+          variants={itemVariants}
+        >
+          Want to learn more about me?
+        </motion.h1>
+
+        <motion.p className="italic mt-2" variants={itemVariants}>
+          Chat with an AI-powered bot that knows all about my background, skills, and projects — built by me, for you.
+        </motion.p>
+
+        <motion.p className="italic" variants={itemVariants}>
+          Powered by Retrieval-Augmented Generation (RAG) and LangGraph, deployed on Hugging Face, and hosted on AWS with a custom React frontend.
+        </motion.p>
+
+        <motion.div
+          className="flex justify-center mt-4 items-center gap-2"
+          variants={itemVariants}
+        >
+          <h3 className="text-xl font-bold">Meet Pence Bot</h3>
+          <motion.img
+            src="https://cdn-icons-png.flaticon.com/512/11719/11719585.png"
+            alt="pence bot"
+            width={30}
+            height={30}
+            className="rounded-full"
+            animate={{
+              y: ["0%", "-10%", "0%"], // simple bounce
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+
+        <motion.button
+          onClick={() => toggleEnableChatbot()}
+          className="bg-blue-600 text-white px-4 py-2 mt-4 rounded hover:bg-blue-700 transition"
+          variants={itemVariants}
+          whileHover={{ scale: 1.05, boxShadow: "0 0 12px rgba(59,130,246,0.8)" }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Try It Now
+        </motion.button>
+      </motion.div>
+
     </div>
   );
 }

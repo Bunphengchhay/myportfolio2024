@@ -156,9 +156,9 @@ function Chatbot({isDarkMode, isChatbotOpen}) {
             <div className="flex-1 p-3 overflow-y-auto text-xs space-y-2">
                 {/* {chat.length === 0 && ( */}
                 <div> 
-                <p className="font-semibold">👋 Welcome to Pence Bot!</p>
-                <p className="text-gray-400">This is an experimental AI chatbot built with RAG and LangGraph as part of a portfolio project. Your conversation is not stored or recorded.</p>
-                <p className=" my-2">😃  Well, it's time to get to know me better </p>
+                <p className="font-semibold text-lg">👋 Hi there, I'm Pence Bot!</p>
+                <p className="text-gray-400">I'm your personal guide—here to help you explore everything about pence from my projects and education to fun facts and more.</p>
+                <p className="my-2">😃 Ready to discover what I'm all about? Let's get started!</p>
 
                 {/* <div className="w-full flex gap-2 mt-1">
                     <button className="border-[1px] border-solid rounded-full p-1"> Who is Pence ? </button>

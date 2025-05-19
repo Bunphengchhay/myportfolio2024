@@ -10,6 +10,10 @@ import Footer from "./footer";
 import MobileNav from "./mobilenav";
 import Chatbot from "./chatbot";
 import { useState} from "react";
+import Tictactoe from "./tictactoe";
+import BallBounceGame from "./bouncegame";
+import Game from "./game";
+import BallBouncerGame from "./bouncegame";
 
 
 function Landing() {
@@ -49,6 +53,9 @@ function Landing() {
                     <Element name= 'Experiences'> <Experiences isDarkMode={isDarkMode} mainStyle={mainStyle}/> </Element>
             
                     <Element name= 'Projects' > <Projects isDarkMode={isDarkMode} mainStyle={mainStyle}/> </Element>
+
+                    {/* <BallBouncerGame/> */}
+                    <Tictactoe/>
 
                     <Element name= 'Courses'> <Courses isDarkMode={isDarkMode} mainStyle={mainStyle} /> </Element>
 

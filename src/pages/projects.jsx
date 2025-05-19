@@ -22,7 +22,7 @@ import databaseIcon from '../artifact/icons8-database-80.png';
 import gameIcon from '../artifact/icons8-game-50.png';
 import ratingIcon from '../artifact/icons8-rating-80.png';
 import myPortfolioScreenShot from '../artifact/portfolioscreenshot.png';
-import viewmore from "../artifact/icons8-arrow-down-50.png";
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { motion, AnimatePresence } from "framer-motion";
 
 
@@ -54,23 +54,25 @@ function Projects({isDarkMode}) {
                     <h1 className= 'text-3xl font-bold'> Projects </h1>
                     <p className="text-sm"> A curated collection of personal and academic projects, spanning DevOps, MLOps, Machine Learning, and cutting-edge AI applications — including RAG and Agentic AI systems.</p>
                 </div>
-                <div className="w-full flex justify-center gap-5 mt-1">
-                    {projectsCollections.map((project, index) => {
-                        const isActive = itemDisplay === project.code;
+              
+                  <div className="w-full flex justify-center gap-5 mt-1">
+                      {projectsCollections.map((project, index) => {
+                          const isActive = itemDisplay === project.code;
 
-                        return (
-                        <button
-                            key={index}
-                            className={`px-2 py-1 md:px-4 md:py-2 rounded-md shadow-md transition-colors duration-200 text-sm md:text-base ${
-                            isActive ? "bg-stone-800 text-white" : "bg-white text-gray-900"
-                            }`}
-                            onClick={() => setItemDisplay(project.code)}
-                        >
-                            {project.title}
-                        </button>
-                        );
-                    })}
-                </div>
+                          return (
+                          <button
+                              key={index}
+                              className={`px-2 py-1 md:px-4 md:py-2 rounded-md shadow-md transition-colors duration-200 text-sm md:text-base ${
+                              isActive ? "bg-stone-800 text-white" : "bg-white text-gray-900"
+                              }`}
+                              onClick={() => setItemDisplay(project.code)}
+                          >
+                              {project.title}
+                          </button>
+                          );
+                      })}
+                  </div>
+               
             </div>
             <div className="w-full mt-5">
                 {renderContent()}
@@ -90,7 +92,7 @@ const DevOps = () => {
         {sde.map((item, index) => (
           <div
             key={index}
-            className="relative w-full h-[280px] md:h-[280px] cursor-pointer bg-stone-800 shadow-md rounded-xl p-3 text-white text-xs md:text-sm hover:bg-stone-900 transition-colors duration-200 hover:scale-105 transform-style preserve-3d transition-transform duration-300"
+            className="relative w-full cursor-pointer bg-stone-800 shadow-md rounded-xl p-3 text-white text-xs md:text-sm hover:bg-stone-900 transition-colors duration-200 hover:scale-105 transform-style preserve-3d transition-transform duration-300"
             onClick={() => setSelectedIndex(index)}
           >
             <div className="flex justify-between">
@@ -113,9 +115,10 @@ const DevOps = () => {
               </div>
             </div>
 
-            <h1 className="font-bold text-white mt-4">Description</h1>
-            <p className="text-gray-400">{item.description}</p>
-            <img src={viewmore} alt='arrow down' width={15} height={15} className="mt-2"/>
+            {/* <h1 className="font-bold text-white mt-4">Description</h1>
+            <p className="text-gray-400">{item.description}</p> */}
+            <ArrowCircleRightIcon fontSize="small" className="hover:cursor-pointer hover:scale-110 transition-transform duration-200 mt-2" />
+            {/* <img src={viewmore} alt='arrow down' width={15} height={15} className="mt-2"/> */}
           </div>
         ))}
       </div>
@@ -204,12 +207,19 @@ const MachineLearning = () => {
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
           >
-            <div className="h-[20%] md:h-[18%]">
+            {/* <div className="h-[20%] md:h-[18%]">
               <h1 className="text-white font-bold text-sm md:text-lg">{item.title}</h1>
               <p className="text-gray-400 text-xs md:text-sm">{item.date}</p>
+            </div> */}
+          <div className="w-full h-[25%] flex justify-between">
+            <div> 
+              <h1 className="text-sm font-bold">{item.title}</h1>
+              <p className="text-sm mt-2">{item.date}</p>
             </div>
+            <ArrowCircleRightIcon fontSize="small" className="hover:cursor-pointer hover:scale-110 transition-transform duration-200" />
+          </div>
             <div
-              className="w-full"
+              className="w-full rounded-xl"
               style={{
                 height: "75%",
                 backgroundImage: `url(${item.image})`,
@@ -217,7 +227,6 @@ const MachineLearning = () => {
                 backgroundPosition: "center",
               }}
             ></div>
-            <img src={viewmore} alt='arrow down' width={15} height={15} className="mt-2"/>
           </motion.div>
         ))}
       </div>
@@ -296,9 +305,14 @@ const SelfProject = () => {
             onClick={() => setExpandedIndex(index)}
             className="cursor-pointer bg-stone-800 text-white shadow-md rounded-xl p-4 text-sm hover:bg-stone-900 transition-colors duration-200 hover:scale-105 preserve-3d transition-transform"
           >
-            <h1 className="text-xl md:text-2xl font-bold">{item.title}</h1>
-            <p className="text-sm mt-2">{item.summary}</p>
-            <img src={viewmore} alt='arrow down' width={15} height={15} className="mt-2"/>
+          <div className="flex justify-between">
+            <div> 
+              <h1 className="text-xl md:text-2xl font-bold">{item.title}</h1>
+              <p className="text-sm mt-2">{item.summary}</p>
+            </div>
+            <ArrowCircleRightIcon fontSize="small" className="hover:cursor-pointer hover:scale-110 transition-transform duration-200" />
+          </div>
+            {/* <img src={viewmore} alt='arrow down' width={15} height={15} className="mt-2"/> */}
           </motion.div>
         ))}
       </div>
@@ -335,7 +349,7 @@ const SelfProject = () => {
           onClick={(e) => e.stopPropagation()}
         >
 
-        <div className="w-full h-[200px] flex justify-end bg-white rounded-b-xl mb-2" style={{backgroundImage: `url(${SelfProjectsItems[expandedIndex].image})`, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}> 
+        <div className="w-full h-[200px] flex justify-end bg-white rounded-xl my-2" style={{backgroundImage: `url(${SelfProjectsItems[expandedIndex].image})`, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}> 
         
         </div>
           <h1 className="text-lg font-bold">{SelfProjectsItems[expandedIndex].title}</h1>
@@ -390,7 +404,7 @@ const SelfProject = () => {
 const SelfProjectsItems = [
     {
         title: 'Portfolio Chatbot',
-        summary: 'An experimental RAG (Retrieval-Augmented Generation) chatbot built with LangGraph and deployed via Hugging Face. It allows visitors to interactively learn about my background, projects, and resume—right from the site. All conversations are ephemeral and handled securely.',
+        summary: 'An AI Chatbot that can answer questions about me and my projects',
         image: myPortfolioScreenShot,
         useCase: 'Generative AI Assistant',
         description: 'This application enable users to efficiently find more accurate informations about me without going through the website. It also allow me to ensure what informations I want users or veiwers to know about me.',

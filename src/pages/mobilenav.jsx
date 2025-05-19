@@ -156,35 +156,60 @@ const myContact = [
 ]
 
 const Hamburger = ({ isOpen, toggle, isDarkMode }) => {
-    return (
+  const baseLine = `${isDarkMode ? "bg-white" : "bg-white"} block h-0.5 w-6 rounded transition duration-300 ease-in-out`;
+
+  return (
+    <div className="inline-flex items-center justify-center border border-white border-[1px] py-2 px-3 bg-stone-800 rounded-xl" onClick={toggle}>
       <button
-        className={`flex flex-col justify-center items-center w-10 h-10 z-[9999] group md:hidden border-[1px] border-solid ${isDarkMode ? 'border-white' : 'border-gray-900'}`}
-        onClick={toggle}
+        className="flex flex-col gap-[1px] items-center w-fit z-[9999] md:hidden"
         aria-label="Toggle menu"
       >
         <span
-        className={`${
-            isDarkMode ? "bg-white" : "bg-gray-900"
-        } block h-0.5 w-6 transform transition duration-300 ease-in-out ${
-            isOpen ? "rotate-45 translate-y-1.5" : "-translate-y-1.5"
-        }`}
+          className={`${baseLine} ${isOpen ? "rotate-45 translate-y-[2px]" : "-translate-y-[3px]"}`}
         />
         <span
-        className={`${
-            isDarkMode ? "bg-white" : "bg-gray-900"
-        } block h-0.5 w-6 transition duration-300 ease-in-out ${
-            isOpen ? "opacity-0" : "opacity-100"
-        }`}
+          className={`${baseLine} ${isOpen ? "opacity-0" : "opacity-100"}`}
         />
         <span
-        className={`${
-            isDarkMode ? "bg-white" : "bg-gray-900"
-        } block h-0.5 w-6 transform transition duration-300 ease-in-out ${
-            isOpen ? "-rotate-45 -translate-y-1.5" : "translate-y-1.5"
-        }`}
+          className={`${baseLine} ${isOpen ? "-rotate-45 -translate-y-[2px]" : "translate-y-[3px]"}`}
         />
-
       </button>
-    );
-  };
+    </div>
+  );
+};
+
+
+
+// const Hamburger = ({ isOpen, toggle, isDarkMode }) => {
+//     return (
+//       <button
+//         className={`flex flex-col justify-center items-center w-10 h-10 z-[9999] group md:hidden border-[1px] border-solid ${isDarkMode ? 'border-white' : 'border-gray-900'}`}
+//         onClick={toggle}
+//         aria-label="Toggle menu"
+//       >
+//         <span
+//         className={`${
+//             isDarkMode ? "bg-white" : "bg-gray-900"
+//         } block h-0.5 w-6 transform transition duration-300 ease-in-out ${
+//             isOpen ? "rotate-45 translate-y-1.5" : "-translate-y-1.5"
+//         }`}
+//         />
+//         <span
+//         className={`${
+//             isDarkMode ? "bg-white" : "bg-gray-900"
+//         } block h-0.5 w-6 transition duration-300 ease-in-out ${
+//             isOpen ? "opacity-0" : "opacity-100"
+//         }`}
+//         />
+//         <span
+//         className={`${
+//             isDarkMode ? "bg-white" : "bg-gray-900"
+//         } block h-0.5 w-6 transform transition duration-300 ease-in-out ${
+//             isOpen ? "-rotate-45 -translate-y-1.5" : "translate-y-1.5"
+//         }`}
+//         />
+
+//       </button>
+//     );
+//   };
   
