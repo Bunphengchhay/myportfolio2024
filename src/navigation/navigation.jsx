@@ -19,7 +19,7 @@ function Navigation({activePage, onNavigation, scrollPosition}) {
   const sidebarColor = fadeOpacity === initialFadeOpacity ? initialColor : 'white';
 
   // Dynamically set the background color based on the scroll position
-  const sidebarBackgroundColor = fadeOpacity === initialFadeOpacity ? initialBackgroundColor : '#40826D' ;//'#4D5D53'; //'#013214'; // '#5E8C6A';
+  const sidebarBackgroundColor = fadeOpacity === initialFadeOpacity ? initialBackgroundColor : 'darkslategray' ;//'#4D5D53'; //'#013214'; // '#5E8C6A';
   // Dynamically set the burger-dash color based on the scroll position
   const burgerDashColor = scrollPosition > bgColorChangeThreshold ? 'white' : initialBurgerDashColor;
 

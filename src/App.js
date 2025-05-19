@@ -1,10 +1,11 @@
-import Main from "./view/main";
-import "./style/main.css";
+import Landing from "./pages/landing";
+import './App.css';
 
 function App() {
   return ( 
-    <div className="AppBackground">
-      <Main/>
+    <div>
+      <Landing/>
+      {/* <Main/> */}
     </div>
    );
 }
