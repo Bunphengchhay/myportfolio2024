@@ -5,8 +5,8 @@ import html2pdf from "html2pdf.js";
 import DOMPurify from "dompurify";
 
 function Chatbot({isDarkMode, isChatbotOpen}) {
-    const recognitionRef = useRef(null);
-    const [isListening, setIsListening] = useState(false);
+    // const recognitionRef = useRef(null);
+    // const [isListening, setIsListening] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState("");
     const [chat, setChat] = useState([]);
@@ -35,7 +35,7 @@ function Chatbot({isDarkMode, isChatbotOpen}) {
         if (!query.trim()) return;
       
         const userMessage = { role: "user", content: query };
-        const typingMessage = { role: "bot", content: "Pence Bot is typing…" };
+        const typingMessage = { role: "bot", content: "Pence Bot is thinking . . . " };
       
         setChat((prev) => [...prev, userMessage, typingMessage]);
         setQuery(""); // Clear input field
@@ -150,15 +150,15 @@ function Chatbot({isDarkMode, isChatbotOpen}) {
                 <img src={minimizeIcon} width={20} height={20} alt="minimize" />
                 </button>
             </div>
-            <span className="text-xs text-left mt-0 text-white"> Server may take a few seconds to respond. </span>
+            <span className="text-xs text-left mt-0 text-white"> Server may take sometime to response</span>
             </div>
 
             <div className="flex-1 p-3 overflow-y-auto text-xs space-y-2">
                 {/* {chat.length === 0 && ( */}
                 <div> 
                 <p className="font-semibold text-lg">👋 Hi there, I'm Pence Bot!</p>
-                <p className="text-gray-400">I'm your personal guide—here to help you explore everything about pence from my projects and education to fun facts and more.</p>
-                <p className="my-2">😃 Ready to discover what I'm all about? Let's get started!</p>
+                <p className="text-gray-400">I'm your personal guide—here to help you explore everything about pence from my projects and education to fun facts and more. Your conversation will not be recorded</p>
+                <p className="my-3">😃 Ready to discover what I'm all about? Let's get started!</p>
 
                 {/* <div className="w-full flex gap-2 mt-1">
                     <button className="border-[1px] border-solid rounded-full p-1"> Who is Pence ? </button>
@@ -167,25 +167,25 @@ function Chatbot({isDarkMode, isChatbotOpen}) {
                 <div className="w-full grid grid-cols-2 gap-2 mt-1">
                     <button
                         onClick={() => handleQuickQuestion("Who is Pence?")}
-                        className="border-[1px] border-solid rounded-full p-1 px-3 hover:bg-blue-200 transition"
+                        className="border-[1px] border-solid rounded-full p-1 px-3 hover:bg-stone-700 hover:text-white transition"
                     >
                         Who is Pence?
                     </button>
                     <button
                         onClick={() => handleQuickQuestion("Where did he go to school?")}
-                        className="border-[1px] border-solid rounded-full p-1 px-3 hover:bg-blue-200 transition"
+                        className="border-[1px] border-solid rounded-full p-1 px-3 hover:bg-stone-700 hover:text-white transition"
                     >
                         Where did he go to school?
                     </button>
                     <button
                         onClick={() => handleQuickQuestion("Tell me about his projects?")}
-                        className="border-[1px] border-solid rounded-full p-1 px-3 hover:bg-blue-200 transition"
+                        className="border-[1px] border-solid rounded-full p-1 px-3 hover:bg-stone-700 hover:text-white transition"
                     >
                         Tell me about his projects?
                     </button>
                     <button
                         onClick={() => handleQuickQuestion("Create his resume?")}
-                        className="border-[1px] border-solid rounded-full p-1 px-3 hover:bg-blue-200 transition"
+                        className="border-[1px] border-solid rounded-full p-1 px-3 hover:bg-stone-700 hover:text-white transition"
                     >
                         Create his resume ?
                     </button>

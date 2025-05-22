@@ -410,7 +410,8 @@ const SelfProjectsItems = [
         description: 'This application enable users to efficiently find more accurate informations about me without going through the website. It also allow me to ensure what informations I want users or veiwers to know about me.',
         task: [
             'Web scrapping my own personal website, vectorize the text and store on a DB server',
-            'Developed RAG application that allow LLM to perform semantic search and vector similarity search on my vector data',
+            'Developed a Retrieval-Augmented Generation (RAG) system, enabling efficient vectorized search using FAISS, Langgraph, and advanced text embeddings',
+            'Enhanced retrieval accuracy through strategic indexing techniques, leveraging recursive text splitting and metadata design, including source tracking, section structuring, summarization, and keyword tagging',
             'Dockerized the backend chabot system and deployed it on Huggingface Spaces server',
             'Create RestAPIs using FastAPI to allow stream chunk output to the frontend',
             'Developed frontend with React and Framer-motion and deployed in on AWS Amplify including CI/CD pipeline automation with Github'

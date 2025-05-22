@@ -11,9 +11,7 @@ import MobileNav from "./mobilenav";
 import Chatbot from "./chatbot";
 import { useState} from "react";
 import Tictactoe from "./tictactoe";
-import BallBounceGame from "./bouncegame";
-import Game from "./game";
-import BallBouncerGame from "./bouncegame";
+import MemoryCardGame from "./memorycard";
 
 
 function Landing() {
@@ -56,6 +54,8 @@ function Landing() {
 
                     {/* <BallBouncerGame/> */}
                     <Tictactoe/>
+
+                    <MemoryCardGame/>
 
                     <Element name= 'Courses'> <Courses isDarkMode={isDarkMode} mainStyle={mainStyle} /> </Element>
 

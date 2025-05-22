@@ -1,4 +1,4 @@
-import { useRef, useMemo, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import allIntern from "../artifact/myaws.JPG";
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
@@ -66,15 +66,6 @@ function Card({ item, i }) {
 
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const cardVariants = {
-      offscreen: { opacity: 0, y: 30 },
-      onscreen: {
-        opacity: 1,
-        y: 0,
-        transition: { type: "spring", bounce: 0.4, duration: 0.8 },
-      },
-    };
-
     const handleExpand = (e) => {
       e.stopPropagation();
       setIsExpanded(true);
@@ -93,9 +84,9 @@ function Card({ item, i }) {
                   transition: "transform 0.3s ease, opacity 0.3s ease",
               }}
               >
-              <div className="w-full flex justify-center items-center border-b-[1px] hover:cursor-pointer hover:bg-stone-900 hover:rounded-3xl hover:text-white hover:border-none transition-all duration-300">
+              <div className="w-full flex justify-center items-center border-b-[1px] border-stone-500 hover:cursor-pointer hover:bg-stone-900 hover:rounded-3xl hover:text-white hover:border-none transition-all duration-300">
                   <div
-                  className="w-full px-4 py-2 flex flex-col text-left overflow-y-auto"
+                  className="w-full px-4 pb-3 flex flex-col text-left overflow-y-auto"
                   onClick={handleExpand}
                   >
                   <div className="w-full flex flex-cols justify-start items-center gap-4 md:gap-16 items-center">
@@ -197,9 +188,19 @@ function Card({ item, i }) {
 
 
 const data = [
+    // {
+    //   Employer: 'Boehringer Ingelheim',
+    //   Position: 'MLOps Engineer',
+    //   Date: 'September, 2025',
+    //   Description: ['Incoming'],
+    //   TechStack: 'Incoming',
+    //   Logo: 'https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYm9laHJpbmdlci1pbmdlbGhlaW1cL2ZpbGVcL2VpdWtIZFd3VG9iZEFrS3hpNURqLnBuZyJ9:boehringer-ingelheim:NPNSsdVXrMIUUb2_hr9RwRgrYHnk8v25xU30SdMp_j4?width=2400',
+    //   Summary: 'Incoming Work'
+
+    // },
     {
         Employer: 'Intel Corporation',
-        Position: 'Incoming Graduate Software Engineer Intern',
+        Position: 'Module Development Engineer Intern',
         Date: 'June, 2025 - August, 2025',
         Description: ['Incoming'],
         TechStack: 'Incoming',

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef} from "react";
 import { Link } from "react-scroll";
 import me from '../artifact/IMG_5358.jpg';
 import linkedLogo from '../artifact/icons8-linkedin-50.png';
@@ -100,13 +100,21 @@ const TryMe = ({isDarkMode, toggleDarkMode, toggleEnableChatbot, isChatbotEnable
     
   return (
     <div className="relative" ref={dropdownRef}>
-              <button
+              {/* <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="flex justify-between items-center border rounded-xl mr-2 px-2 py-1 gap-1 text-xs bg-stone-800 text-white hover:opacity-90 transition-all duration-200"
                 >
                 Try Me
                 <ArrowCircleRightIcon fontSize="small" className="hover:cursor-pointer hover:scale-110 transition-transform duration-200" />
-            </button>
+            </button> */}
+            <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="flex justify-between items-center border rounded-xl mr-2 px-2 py-1 gap-1 text-xs bg-stone-800 text-white hover:opacity-90 transition-all duration-200 w-20 h-7"
+          >
+            Try Me
+            <ArrowCircleRightIcon fontSize="small" className="hover:cursor-pointer hover:scale-110 transition-transform duration-200" />
+          </button>
+
     
               {menuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-50 text-gray-900 left-1">
@@ -159,22 +167,42 @@ const Hamburger = ({ isOpen, toggle, isDarkMode }) => {
   const baseLine = `${isDarkMode ? "bg-white" : "bg-white"} block h-0.5 w-6 rounded transition duration-300 ease-in-out`;
 
   return (
-    <div className="inline-flex items-center justify-center border border-white border-[1px] py-2 px-3 bg-stone-800 rounded-xl" onClick={toggle}>
+    <div
+      className="inline-flex items-center justify-center border border-white py-2 px-3 bg-stone-800 rounded-xl w-20 h-7"
+      onClick={toggle}
+    >
       <button
-        className="flex flex-col gap-[1px] items-center w-fit z-[9999] md:hidden"
-        aria-label="Toggle menu"
-      >
-        <span
-          className={`${baseLine} ${isOpen ? "rotate-45 translate-y-[2px]" : "-translate-y-[3px]"}`}
-        />
-        <span
-          className={`${baseLine} ${isOpen ? "opacity-0" : "opacity-100"}`}
-        />
-        <span
-          className={`${baseLine} ${isOpen ? "-rotate-45 -translate-y-[2px]" : "translate-y-[3px]"}`}
-        />
-      </button>
+          className="flex flex-col gap-[1px] items-center w-fit z-[9999] md:hidden"
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`${baseLine} ${isOpen ? "rotate-45 translate-y-[2px]" : "-translate-y-[3px]"}`}
+          />
+          <span
+            className={`${baseLine} ${isOpen ? "opacity-0" : "opacity-100"}`}
+          />
+          <span
+            className={`${baseLine} ${isOpen ? "-rotate-45 -translate-y-[2px]" : "translate-y-[3px]"}`}
+          />
+        </button>
     </div>
+
+    // <div className="inline-flex items-center justify-center border border-white border-[1px] py-2 px-3 bg-stone-800 rounded-xl" onClick={toggle}>
+    //   <button
+    //     className="flex flex-col gap-[1px] items-center w-fit z-[9999] md:hidden"
+    //     aria-label="Toggle menu"
+    //   >
+    //     <span
+    //       className={`${baseLine} ${isOpen ? "rotate-45 translate-y-[2px]" : "-translate-y-[3px]"}`}
+    //     />
+    //     <span
+    //       className={`${baseLine} ${isOpen ? "opacity-0" : "opacity-100"}`}
+    //     />
+    //     <span
+    //       className={`${baseLine} ${isOpen ? "-rotate-45 -translate-y-[2px]" : "translate-y-[3px]"}`}
+    //     />
+    //   </button>
+    // </div>
   );
 };
 
