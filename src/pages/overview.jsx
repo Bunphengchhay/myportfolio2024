@@ -148,6 +148,7 @@ function Overview({toggleEnableChatbot, isChatbotEnable}) {
                   <br /><br />
                   I'm passionate about creating scalable, human-centered solutions that solve meaningful problems across domains.
                 </p>
+                
               </div>
             )}
 
@@ -266,3 +267,11 @@ const aboutMeIcon = {
     aws: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/aws-color.png',
     tlbu: tlbulogo
 }
+
+const coverletter = `I am a software engineer and data scientist with a unique background that bridges technology, leadership, and impact. My career began in the nonprofit and business sectors, where I developed a strong foundation in customer empathy, communication, and team dynamics. That foundation now fuels my approach to building intelligent systems that solve real-world problems.
+
+After earning my B.S. in Computer Science from Sacramento State and beginning my M.S. in Data Science at Boston University, I transitioned fully into tech. I’ve had the opportunity to work across cloud infrastructure, full-stack development, and AI/ML. At Amazon Web Services, I built distributed, event-driven AI applications as an Associate Solutions Architect. At Kismet XYZ, I designed Agentic AI systems, retrieval-augmented generation (RAG) pipelines, and real-time dashboards that help users interact with complex data intuitively. This summer, I’ll join Intel as a Graduate Technical Intern, helping to develop tools that support manufacturing optimization using advanced analytics.
+
+I’m particularly passionate about projects that combine cutting-edge technology with human-centered design. Whether it’s architecting cloud-native data pipelines, deploying ML models at scale, or building responsive interfaces, I focus on solutions that are not only technically sound—but useful, reliable, and accessible.
+
+I’m excited to bring this blend of skills to a mission-driven team. Thank you for taking the time to learn more about me—I’d love to connect and explore how I can contribute to your organization.`
