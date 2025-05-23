@@ -1,3 +1,5 @@
+/* global gtag */
+
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -89,7 +91,19 @@ function Nav({ isDarkMode, toggleDarkMode, toggleEnableChatbot, isChatbotEnable 
                 </div>
               </button>
                 <button className="w-full flex justify-between items-center px-4 py-2" 
-                onClick={() => {toggleEnableChatbot();  setMenuOpen(false);}}> 
+                // onClick={() => {toggleEnableChatbot();  setMenuOpen(false);}}
+                onClick={() => {
+                  toggleEnableChatbot();
+                  setMenuOpen(false);
+                  if (typeof gtag === 'function') {
+                    gtag('event', 'chatbot_toggle', {
+                      event_category: 'Chatbot',
+                      event_label: isChatbotEnable ? 'Deactivated' : 'Activated',
+                      value: isChatbotEnable ? 0 : 1,
+                    });
+                  }
+                }}  
+                > 
                     <img src='https://cdn-icons-png.flaticon.com/512/11719/11719585.png' alt='avarta logo' width={20} height={20} />
                     {isChatbotEnable  ? <p> Deactivate me </p> : <p> Activate me </p>}
                 </button>

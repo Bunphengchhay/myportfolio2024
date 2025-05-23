@@ -10,6 +10,7 @@ import githubLogo from '../artifact/icons8-github-100.png';
 import resumeLogo from '../artifact/icons8-resume-100.png';
 import myresume from '../artifact/intern_sde_05202.pdf';
 import { useState } from 'react';
+import GetMetrics from './getmetric';
 // import awsLogo from '../artifact/aws.png'
 
 function Overview({toggleEnableChatbot, isChatbotEnable}) {
@@ -103,6 +104,7 @@ function Overview({toggleEnableChatbot, isChatbotEnable}) {
             Leveraging AIML and Cloud Infrastructure to build impactful applications and improve user's experiences
           </p>
           <p className='text-sm text-gray-500 mt-2'>Currently @Intel · Previously @AWS SA · @Kismet XYZ SE</p>
+            <GetMetrics/>
         </div>  
       </section>
 

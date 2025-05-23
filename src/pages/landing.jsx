@@ -1,3 +1,5 @@
+/* global gtag */
+
 import { Element } from "react-scroll";
 import Nav from "./nav";
 import Overview from "./overview";
@@ -12,6 +14,7 @@ import Chatbot from "./chatbot";
 import { useState} from "react";
 import Tictactoe from "./tictactoe";
 import MemoryCardGame from "./memorycard";
+import { useEffect, use } from "react";
 
 
 function Landing() {
@@ -31,6 +34,32 @@ function Landing() {
         color: isDarkMode ? "#ffffff" : "#111827",
         transition: "all 0.3s ease",
     };
+    useEffect(() => {
+        const handleScroll = () => {
+          const sections = ['Overview', 'Educations', 'Skills', 'Experiences', 'Projects', 'Courses', 'Footers'];
+          for (const section of sections) {
+            const el = document.querySelector(`[name='${section}']`);
+            if (el) {
+              const rect = el.getBoundingClientRect();
+              if (rect.top <= 100 && rect.bottom >= 100) {
+                // Send page_view event to Google Analytics
+                if (typeof gtag === 'function') {
+                  gtag('event', 'page_view', {
+                    page_title: section,
+                    page_path: `/${section.toLowerCase()}`,
+                  });
+                }
+                break;
+              }
+            }
+          }
+        };
+      
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+      
+      
 
     return ( 
         <div className="!font-inter w-full h-full flex flex-col justify-center items-center" style={mainStyle}>
