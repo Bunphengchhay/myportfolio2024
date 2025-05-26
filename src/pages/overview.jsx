@@ -104,7 +104,7 @@ function Overview({toggleEnableChatbot, isChatbotEnable}) {
             Leveraging AIML and Cloud Infrastructure to build impactful applications and improve user's experiences
           </p>
           <p className='text-sm text-gray-500 mt-2'>Currently @Intel · Previously @AWS SA · @Kismet XYZ SE</p>
-            <GetMetrics/>
+            {/* <GetMetrics/> */}
         </div>  
       </section>
 

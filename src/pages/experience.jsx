@@ -76,20 +76,21 @@ function Card({ item, i }) {
       <>
           <motion.div
               ref={containerRef}
-              className='mt-3'
+              // className='mt-3'
               style={{
                   opacity,
                   scale,
                   zIndex: isExpanded ? 50 : 1,
                   transition: "transform 0.3s ease, opacity 0.3s ease",
               }}
+              className="w-full h-auto flex justify-center items-center"
               >
-              <div className="w-full flex justify-center items-center border-b-[1px] border-stone-500 hover:cursor-pointer hover:bg-stone-900 hover:rounded-3xl hover:text-white hover:border-none transition-all duration-300">
+              <div className="w-full flex justify-center items-center ">
                   <div
                   className="w-full px-4 pb-3 flex flex-col text-left overflow-y-auto"
                   onClick={handleExpand}
                   >
-                  <div className="w-full flex flex-cols justify-start items-center gap-4 md:gap-16 items-center">
+                  <div className="w-full flex flex-cols justify-start items-center gap-4 md:gap-16 items-center p-2 border-b-[1px] border-stone-500 hover:cursor-pointer hover:bg-stone-900 hover:rounded-3xl hover:text-white hover:border-none transition-all duration-300">
                       <img
                       src={item.Logo}
                       alt="logo"

@@ -138,7 +138,7 @@ function Chatbot({isDarkMode, isChatbotOpen}) {
 
       {isOpen && (
         <div
-            className={`flex flex-col rounded-lg overflow-hidden transition-all duration-500 ease-in-out h-[70vh] md:h-[90vh] w-[94vw] md:w-[30vw] 
+            className={`flex flex-col rounded-lg overflow-hidden transition-all duration-500 ease-in-out h-[70vh] md:h-[80vh] w-[90vw] md:w-[30vw] 
             // ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}`
             }
             style={mainStyle}
